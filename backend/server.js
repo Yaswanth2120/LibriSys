@@ -8,6 +8,7 @@ const authRoutes = require('./routes/auth');
 const bookRoutes = require('./routes/books');
 const borrowRoutes = require('./routes/borrow');
 const reportRoutes = require('./routes/reports');
+const notificationRoutes = require('./routes/notifications');
 
 const app = express();
 const PORT = process.env.PORT || 5005;
@@ -20,6 +21,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/books', bookRoutes);
 app.use('/api/borrow', borrowRoutes);
 app.use('/api/reports', reportRoutes);
+app.use('/api/notifications', notificationRoutes);
 
 // ✅ Root Route
 app.get('/', (req, res) => {
